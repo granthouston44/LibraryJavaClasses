@@ -2,6 +2,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class BookTest {
 
@@ -15,8 +16,13 @@ public class BookTest {
     }
 
     @Test
-    public void hasAuthor(){
+    public void hasName(){
         assertEquals("The Watchmen", watchmen.getName());
+    }
+
+    @Test
+    public void hasAuthor(){
+        assertEquals("Alan Moore", watchmen.getAuthor());
     }
 
 
