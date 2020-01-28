@@ -9,6 +9,8 @@ public class Library {
     private int capacity;
     private Book book;
     private ArrayList<Book> books;
+    private Borrower borrower;
+
 
     public Library(){
         this.capacity = 3;
@@ -31,9 +33,11 @@ public class Library {
         this.books.add(book);
     }
 
-    public void removeBook(Book book) {
+    public Book removeBook(Book book) {
 
-////        int bookIndex = this.books.indexOf(book);
-        this.books.remove(book);
+        int bookIndex = this.books.indexOf(book);
+        return this.books.remove(bookIndex);
     }
+
+
 }

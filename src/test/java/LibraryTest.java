@@ -49,14 +49,14 @@ public class LibraryTest {
         assertEquals(2, library.getStockCount());
     }
 
-    @Test
-    public void canGiveBookToBorrower(){
-        library.addBook(watchmen);
-        library.addBook(vendetta);
-        library.addBook(book3);
-        borrower.borrow(vendetta);
-        assertEquals(2, library.getStockCount());
-        assertEquals(1, borrower.getBorrowedBookCount());
-    }
+//    @Test
+//    public void canGiveBookToBorrower(){
+//        library.addBook(watchmen);
+//        library.addBook(vendetta);
+//        library.addBook(book3);
+//        library.giveBookToBorrower(vendetta);
+//        assertEquals(2, library.getStockCount());
+//        assertEquals(1, borrower.getBorrowedBookCount());
+//    }
 
 }
