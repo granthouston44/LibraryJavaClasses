@@ -6,10 +6,12 @@ import static org.junit.Assert.assertEquals;
 public class LibraryTest {
 
     private Library library;
+    private Book watchmen;
 
     @Before
     public void before(){
         library = new Library();
+        watchmen = new Book("The Watchmen", "Alan Moore", "Graphic Novel");
     }
 
     @Test
@@ -18,8 +20,20 @@ public class LibraryTest {
     }
 
     @Test
-    public void stockCount(){
-        assertEquals(2, library.getStock());
+    public void addBookToLibrary(){
+        library.addBook(watchmen);
+        assertEquals(1, library.getStock());
     }
+
+    @Test
+    public void addBookFullCapacity(){
+        library.addBook(watchmen);
+        library.addBook(watchmen);
+        assertEquals(1, library.getStock());
+
+
+    }
+
+
 
 }
