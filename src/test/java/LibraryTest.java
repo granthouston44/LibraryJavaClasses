@@ -10,6 +10,7 @@ public class LibraryTest {
     private Book watchmen;
     private Book vendetta;
     private Book book3;
+    private Borrower borrower;
 
     @Before
     public void before(){
@@ -17,7 +18,7 @@ public class LibraryTest {
         watchmen = new Book("The Watchmen", "Alan Moore", "Graphic Novel");
         vendetta = new Book("V For Vendetta", "Alan Moore", "Graphic Novel");
         book3 = new Book("some book", "Alan Moore", "Graphic Novel");
-
+        borrower = new Borrower();
     }
 
     @Test
@@ -46,9 +47,16 @@ public class LibraryTest {
         library.addBook(book3);
         library.removeBook(vendetta);
         assertEquals(2, library.getStockCount());
-
     }
 
-
+    @Test
+    public void canGiveBookToBorrower(){
+        library.addBook(watchmen);
+        library.addBook(vendetta);
+        library.addBook(book3);
+        borrower.borrow(vendetta);
+        assertEquals(2, library.getStockCount());
+        assertEquals(1, borrower.getBorrowedBookCount());
+    }
 
 }
