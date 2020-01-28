@@ -12,7 +12,7 @@ public class Library {
 
     public Library(){
         this.capacity = 10;
-        this.book = new Book();
+//        this.book = new Book();
         this.books = new ArrayList<>();
     }
 

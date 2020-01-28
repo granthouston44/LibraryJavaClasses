@@ -7,11 +7,16 @@ public class Book {
     private String genre;
 
     public Book(String name, String author, String genre) {
-    this.name = name;
-    this.author = author;
-    this.genre = genre;
+        this.name = name;
+        this.author = author;
+        this.genre = genre;
     }
 
+    public String getName(){
+        return this.name;
+    }
 
-
+    public String getAuthor() {
+        return this.author;
+    }
 }
