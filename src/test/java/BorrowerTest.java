@@ -14,10 +14,13 @@ private Book vendetta;
     borrower = new Borrower();
     watchmen = new Book("The Watchmen", "Alan Moore", "Graphic Novel");
     vendetta = new Book("V For Vendetta", "Alan Moore", "Graphic Novel");
-
 }
 
 @Test
+    public void canBorrowBook(){
+    borrower.borrow(vendetta);
+    assertEquals(1 , borrower.getBorrowedBooks());
+}
 
 
 
