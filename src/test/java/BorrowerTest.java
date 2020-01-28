@@ -17,9 +17,14 @@ private Book vendetta;
 }
 
 @Test
+public void numberOfBorrowedBooks(){
+assertEquals(0, borrower.getBorrowedBookCount());
+}
+
+@Test
     public void canBorrowBook(){
     borrower.borrow(vendetta);
-    assertEquals(1 , borrower.getBorrowedBooks());
+    assertEquals(1 , borrower.getBorrowedBookCount());
 }
 
 

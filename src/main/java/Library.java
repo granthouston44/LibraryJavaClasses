@@ -11,19 +11,29 @@ public class Library {
     private ArrayList<Book> books;
 
     public Library(){
-        this.capacity = 1;
+        this.capacity = 3;
 //        this.book = new Book();
         this.books = new ArrayList<>();
     }
 
 
-    public int getStock() {
+    public int getStockCount() {
         return this.books.size();
     }
 
+    public ArrayList<Book> getStock(){
+        return this.books;
+    }
+
     public void addBook(Book book) {
-        int bookCount = getStock();
+        int bookCount = getStockCount();
         if(this.capacity > bookCount )
         this.books.add(book);
+    }
+
+    public void removeBook(Book book) {
+
+////        int bookIndex = this.books.indexOf(book);
+        this.books.remove(book);
     }
 }
