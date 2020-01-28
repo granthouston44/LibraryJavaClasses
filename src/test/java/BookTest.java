@@ -25,6 +25,11 @@ public class BookTest {
         assertEquals("Alan Moore", watchmen.getAuthor());
     }
 
+    @Test
+    public void hasGenre(){
+        assertEquals("Graphic Novel", watchmen.getGenre());
+    }
+
 
 
 
